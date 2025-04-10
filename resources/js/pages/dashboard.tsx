@@ -31,8 +31,6 @@ export default function Dashboard() {
             <div className="flex h-screen">
                 {/* Main Content */}
                 <div className="flex-1 p-6 space-y-6">
-                    {/* Welcome Message */}
-                    <p className="text-violet-600 text-2xl font-bold">Welcome to PhilCST Library</p>
 
                     {/* Quick Stats */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

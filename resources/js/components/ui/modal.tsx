@@ -38,23 +38,86 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
               </Dialog.Title>
 
               {/* Form Grid */}
-              <div className="grid grid-cols-2 gap-4">
-                <input type="text" placeholder="Book Title" className="border p-2 rounded" />
-                <input type="text" placeholder="Author" className="border p-2 rounded" />
-                <input type="text" placeholder="Publisher" className="border p-2 rounded" />
-                <input type="text" placeholder="ISBN" className="border p-2 rounded" />
-                <input type="text" placeholder="Publication Place" className="border p-2 rounded" />
-                <input type="text" placeholder="Edition Information" className="border p-2 rounded" />
-                <input type="text" placeholder="Physical Information" className="border p-2 rounded" />
-                <input type="text" placeholder="URL" className="border p-2 rounded" />
-                <input type="text" placeholder="On Shelf" className="border p-2 rounded" />
-                <input type="text" placeholder="Call Number" className="border p-2 rounded" />
-                <select className="border p-2 rounded col-span-2">
-                  <option value="">Select Category</option>
-                  <option>Fiction</option>
-                  <option>Non-Fiction</option>
-                </select>
-              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                 
+                  <div className="flex flex-col">
+                    <label htmlFor="title">Book Title</label>
+                    <input id="title" type="text" placeholder="" className="border p-2 rounded" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label htmlFor="author">Author</label>
+                    <input id="author" type="text" placeholder="" className="border p-2 rounded" />
+                    <span className="text-xs text-gray-500 italic mt-1">* Author name separated by commas (,)</span>
+                  </div>
+
+                 
+                  <div className="flex flex-col">
+                    <label htmlFor="isbn">ISBN</label>
+                    <input id="isbn" type="text" placeholder="" className="border p-2 rounded" />
+                    <span className="text-xs text-gray-500 italic mt-1">* If there are multiple ISBNs, separate by commas (,)</span>
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label htmlFor="publisher">Publisher</label>
+                    <input id="publisher" type="text" placeholder="" className="border p-2 rounded" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label htmlFor="pubPlace">Publication Place</label>
+                    <input id="pubPlace" type="text" placeholder="" className="border p-2 rounded" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label htmlFor="edition">Edition Information</label>
+                    <input id="edition" type="text" placeholder="" className="border p-2 rounded" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label htmlFor="pages">Pages</label>
+                    <input id="pages" type="text" placeholder="" className="border p-2 rounded" />
+                  </div>
+
+                 
+                  <div className="flex flex-col">
+                    <label htmlFor="category">Select Category</label>
+                    <select id="category" className="border p-2 rounded">
+                      <option value="">Select Category</option>
+                      <option value="Fiction">Criminology</option>
+                      <option value="Non-Fiction">Information and Technology</option>
+                    </select>
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label htmlFor="deweyCode">Select Dewey Code</label>
+                    <select id="deweyCode" className="border p-2 rounded">
+                      <option value="">Select Dewey Code</option>
+                      <option value="000">000</option>
+                      <option value="100">100</option>
+                    </select>
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label htmlFor="deweyClass">Select Dewey Decimal Classification</label>
+                    <select id="deweyClass" className="border p-2 rounded">
+                      <option value="">Select Classification</option>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+
+                 
+                  <div className="flex flex-col">
+                    <label htmlFor="quantity">Quantity</label>
+                    <input id="quantity" type="text" placeholder="" className="border p-2 rounded" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label htmlFor="callNumber">Call Number</label>
+                    <input id="callNumber" type="text" placeholder="" className="border p-2 rounded" />
+                  </div>
+                </div>
+
 
               {/* Footer */}
               <div className="flex justify-end mt-6 gap-2">
