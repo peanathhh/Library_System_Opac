@@ -14,8 +14,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 
-Route::get('/Bookslist', function () {
-    return Inertia::render('managebooks/Booklist');
+    Route::get('/Bookslist', function () {
+        return Inertia::render('managebooks/Booklist');
     })->name('bookslist');
 
 Route::get('/Dewey', function () {
