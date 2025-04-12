@@ -12,19 +12,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return Inertia::render('dashboard');
     })->name('dashboard');
 });
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/managebooks', function () {
-        return Inertia::render('managebooks/Booklist'); // Or use a wrapper page here
-    })->name('managebooks');
 
-    Route::get('/Bookslist', function () {
-        return Inertia::render('managebooks/Booklist');
+
+Route::get('/Bookslist', function () {
+    return Inertia::render('managebooks/Booklist');
     })->name('bookslist');
 
-    Route::get('/Category', function () {
-        return Inertia::render('managebooks/Category');
-    })->name('category');
-});
+Route::get('/Dewey', function () {
+    return Inertia::render('managebooks/Dewey');
+    })->name('dewey');
+
+Route::get('/ShelfSection', function () {
+    return Inertia::render('managebooks/ShelfSection');
+    })->name('shelfsection');
 
 
 Route::get('/Issuedlist', function () {

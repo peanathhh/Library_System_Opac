@@ -42,13 +42,19 @@ const mainNavItems: NavItem[] = [
         icon: Book, // Icon for Manage Books
         children: [ // Dropdown items
             {
-                title: 'BookList',
+                title: 'Book List',
                 href: '/Bookslist',
                 icon: BookIcon, // Icon for Book list
             },
             {
-                title: 'Category',
-                href: '/Category',
+                title: 'Dewey',
+                href: '/Dewey',
+                icon: BookIcon, // Icon for Book list
+            },
+
+            {
+                title: 'Shelf Section',
+                href: '/ShelfSection',
                 icon: Folder, // Icon for Category
             },
         ],
